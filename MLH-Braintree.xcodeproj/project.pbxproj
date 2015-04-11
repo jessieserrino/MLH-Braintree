@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3FF8FD541AD96D0600597798 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD531AD96D0600597798 /* Shop.swift */; };
+		3FF8FD561AD96EC300597798 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD551AD96EC300597798 /* Beacon.swift */; };
+		3FF8FD581AD9709700597798 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD571AD9709700597798 /* Item.swift */; };
+		3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD591AD9712500597798 /* Cart.swift */; };
 		913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */; };
 		913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CEA1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld */; };
 		913C7CEE1AD952BE00C5EBF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CED1AD952BE00C5EBF7 /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3FF8FD531AD96D0600597798 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		3FF8FD551AD96EC300597798 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
+		3FF8FD571AD9709700597798 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		3FF8FD591AD9712500597798 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLH-Braintree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C7CE71AD952BE00C5EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +69,10 @@
 		911DC6951AD96C540065C967 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3FF8FD531AD96D0600597798 /* Shop.swift */,
+				3FF8FD591AD9712500597798 /* Cart.swift */,
+				3FF8FD571AD9709700597798 /* Item.swift */,
+				3FF8FD551AD96EC300597798 /* Beacon.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -241,7 +253,11 @@
 			files = (
 				913C7CEE1AD952BE00C5EBF7 /* ViewController.swift in Sources */,
 				913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */,
+				3FF8FD561AD96EC300597798 /* Beacon.swift in Sources */,
+				3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */,
 				913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */,
+				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
+				3FF8FD541AD96D0600597798 /* Shop.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
