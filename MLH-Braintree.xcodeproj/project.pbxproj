@@ -12,9 +12,9 @@
 		911DC69D1AD96D6B0065C967 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DC69C1AD96D6B0065C967 /* ItemDetailViewController.swift */; };
 		911DC69F1AD96E2E0065C967 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DC69E1AD96E2E0065C967 /* ReceiptViewController.swift */; };
 		911DC6A11AD96E420065C967 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DC6A01AD96E420065C967 /* CheckoutViewController.swift */; };
+		911DC6A31AD96EB80065C967 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911DC6A21AD96EB80065C967 /* TutorialViewController.swift */; };
 		913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */; };
 		913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CEA1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld */; };
-		913C7CEE1AD952BE00C5EBF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CED1AD952BE00C5EBF7 /* ViewController.swift */; };
 		913C7CF11AD952BE00C5EBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913C7CEF1AD952BE00C5EBF7 /* Main.storyboard */; };
 		913C7CF31AD952BE00C5EBF7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 913C7CF21AD952BE00C5EBF7 /* Images.xcassets */; };
 		913C7CF61AD952BE00C5EBF7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 913C7CF41AD952BE00C5EBF7 /* LaunchScreen.xib */; };
@@ -37,11 +37,11 @@
 		911DC69C1AD96D6B0065C967 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		911DC69E1AD96E2E0065C967 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		911DC6A01AD96E420065C967 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		911DC6A21AD96EB80065C967 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLH-Braintree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C7CE71AD952BE00C5EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913C7CEB1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLH_Braintree.xcdatamodel; sourceTree = "<group>"; };
-		913C7CED1AD952BE00C5EBF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		913C7CF01AD952BE00C5EBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		913C7CF21AD952BE00C5EBF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		913C7CF51AD952BE00C5EBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -90,6 +90,7 @@
 				911DC69C1AD96D6B0065C967 /* ItemDetailViewController.swift */,
 				911DC69E1AD96E2E0065C967 /* ReceiptViewController.swift */,
 				911DC6A01AD96E420065C967 /* CheckoutViewController.swift */,
+				911DC6A21AD96EB80065C967 /* TutorialViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -119,7 +120,6 @@
 				911DC6961AD96C5B0065C967 /* Utilities */,
 				911DC6951AD96C540065C967 /* Models */,
 				913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */,
-				913C7CED1AD952BE00C5EBF7 /* ViewController.swift */,
 				913C7CEF1AD952BE00C5EBF7 /* Main.storyboard */,
 				913C7CF21AD952BE00C5EBF7 /* Images.xcassets */,
 				913C7CF41AD952BE00C5EBF7 /* LaunchScreen.xib */,
@@ -255,7 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				911DC6991AD96D460065C967 /* ShopListViewController.swift in Sources */,
-				913C7CEE1AD952BE00C5EBF7 /* ViewController.swift in Sources */,
+				911DC6A31AD96EB80065C967 /* TutorialViewController.swift in Sources */,
 				911DC69D1AD96D6B0065C967 /* ItemDetailViewController.swift in Sources */,
 				911DC69B1AD96D5A0065C967 /* CurrentCartViewController.swift in Sources */,
 				911DC6A11AD96E420065C967 /* CheckoutViewController.swift in Sources */,
