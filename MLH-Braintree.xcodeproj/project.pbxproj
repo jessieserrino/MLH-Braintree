@@ -85,12 +85,12 @@
 		911DC6971AD96C610065C967 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				911DC6A21AD96EB80065C967 /* TutorialViewController.swift */,
+				911DC69C1AD96D6B0065C967 /* ItemDetailViewController.swift */,
 				911DC6981AD96D460065C967 /* ShopListViewController.swift */,
 				911DC69A1AD96D5A0065C967 /* CurrentCartViewController.swift */,
-				911DC69C1AD96D6B0065C967 /* ItemDetailViewController.swift */,
-				911DC69E1AD96E2E0065C967 /* ReceiptViewController.swift */,
 				911DC6A01AD96E420065C967 /* CheckoutViewController.swift */,
-				911DC6A21AD96EB80065C967 /* TutorialViewController.swift */,
+				911DC69E1AD96E2E0065C967 /* ReceiptViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
