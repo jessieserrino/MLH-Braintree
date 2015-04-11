@@ -18,5 +18,4 @@ class Beacon {
         self.minor = minor
         self.major = major
     }
-    
 }
