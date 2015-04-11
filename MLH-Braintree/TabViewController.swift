@@ -42,6 +42,10 @@ class TabViewController: UIViewController, UITabBarDelegate {
         self.tabNavigationBar.title = item.title
     }
     
+    @IBAction func buyButtonPressed(sender: AnyObject) {
+        
+        performSegueWithIdentifier("CheckoutSegue", sender: self)
+    }
     /*
     // MARK: - Navigation
 

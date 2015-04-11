@@ -7,18 +7,41 @@
 //
 
 import UIKit
+import WebKit
 
 class CheckoutViewController: UIViewController {
 
+    var webView: WKWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.webView = WKWebView(frame: CGRectZero)
+        view.addSubview(webView)
 
+        
+        self.loadCheckoutPage()
         // Do any additional setup after loading the view.
+        
+        
+        let url = NSURL(string:"http://brainbeacon.herokuapp.com/braintree/checkout")
+        let request = NSURLRequest(URL:url!)
+        
+        
+        webView.loadRequest(request)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadCheckoutPage()
+    {
+        webView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        let height = NSLayoutConstraint(item: webView, attribute: .Height, relatedBy: .Equal, toItem: view, attribute: .Height, multiplier: 1, constant: 0)
+        let width = NSLayoutConstraint(item: webView, attribute: .Width, relatedBy: .Equal, toItem: view, attribute: .Width, multiplier: 1, constant: 0)
+        view.addConstraints([height, width])
+        
     }
     
 
