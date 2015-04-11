@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 import CoreLocation
 
 let proximityUUID = NSUUID(UUIDString: "B9407F30-F5F8-466E-AFF9-25556B57FE6D")
@@ -51,6 +52,8 @@ class BeaconManager : NSObject, CLLocationManagerDelegate {
         if myBeacons.count == 3 {
             if closest?.major != myBeacons.first!.major {
                 closest = myBeacons.first!
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                appDelegate.application(handleClosestBeaconChange: closest!)
                 println("Closest is now \(self.closest!.major)")
             }
         }

@@ -7,9 +7,20 @@
 //
 
 import UIKit
+import CoreLocation
 
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    var items =
+    [1412:"Item in beacon 1412",
+        11617:"Item in beacon 11617",
+        36593:"Item in beacon 36593"]
+    
+    var beacon : Int? {
+        didSet {
+            menuTableView.reloadData()
+        }
+    }
+    
     @IBOutlet weak var menuTableView: UITableView! {
         didSet {
             menuTableView.delegate = self
@@ -27,7 +38,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! UITableViewCell
-        cell.textLabel?.text = "My Favorite Item"
+        if let currentBeacon = beacon {
+            cell.textLabel?.text = items[currentBeacon]
+        }
+        
         cell.detailTextLabel?.text = "99£"
         //image here
         return cell
@@ -36,7 +50,16 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let center = NSNotificationCenter.defaultCenter()
+        let queue = NSOperationQueue.mainQueue()
+        let appDelegate = UIApplication.sharedApplication().delegate
         // Do any additional setup after loading the view.
+        
+        center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
+            if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
+                self.beacon = newBeacon.major.integerValue
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
