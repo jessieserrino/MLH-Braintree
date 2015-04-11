@@ -1,139 +1,164 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HTx-fz-PBv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9kL-IY-jhP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--Your Cart-->
-        <scene sceneID="HdV-iu-Mf5">
+        <!--Tab View Controller-->
+        <scene sceneID="rJl-qE-7xd">
             <objects>
-                <viewController title="Your Cart" id="nZl-rL-zFZ" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="VfT-v8-31Y" customClass="TabViewController" customModule="MLH_Braintree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="gZl-Wy-gt7"/>
-                        <viewControllerLayoutGuide type="bottom" id="k90-AU-m8G"/>
+                        <viewControllerLayoutGuide type="top" id="XYi-Yz-c1r"/>
+                        <viewControllerLayoutGuide type="bottom" id="Njr-h5-VXf"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="n5C-Og-Tk0">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dra-HF-ZkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="80" sectionHeaderHeight="1" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-8R-iI6">
-                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </tableView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-sN-Que" userLabel="Shop List">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <connections>
+                                    <segue destination="gIS-oR-UKb" kind="embed" id="lSr-9b-Ncb"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVy-v6-biz" userLabel="Your Cart">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                                <connections>
+                                    <segue destination="q0T-34-KKQ" kind="embed" id="c9k-0K-TTQ"/>
+                                </connections>
+                            </containerView>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLM-Or-FCr">
+                                <rect key="frame" x="0.0" y="687" width="414" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <tabBarItem title="Shop List" image="List" id="H8V-Mx-gnO"/>
+                                    <tabBarItem title="Your Cart" image="Cart" id="jho-L8-rbV"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="k90-AU-m8G" firstAttribute="top" secondItem="4ac-8R-iI6" secondAttribute="bottom" id="522-nH-Mlk"/>
-                            <constraint firstItem="4ac-8R-iI6" firstAttribute="width" secondItem="n5C-Og-Tk0" secondAttribute="width" id="PHT-2W-lqO"/>
-                            <constraint firstItem="4ac-8R-iI6" firstAttribute="top" secondItem="gZl-Wy-gt7" secondAttribute="bottom" id="VBn-5b-k2v"/>
-                            <constraint firstItem="4ac-8R-iI6" firstAttribute="top" secondItem="gZl-Wy-gt7" secondAttribute="bottom" id="g3H-Yy-dl4"/>
-                            <constraint firstAttribute="centerX" secondItem="4ac-8R-iI6" secondAttribute="centerX" id="jTH-w6-WMh"/>
+                            <constraint firstItem="Njr-h5-VXf" firstAttribute="top" secondItem="dLM-Or-FCr" secondAttribute="bottom" id="1Lh-as-A2Q"/>
+                            <constraint firstAttribute="centerX" secondItem="l6o-sN-Que" secondAttribute="centerX" id="2jG-2M-fJI"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="top" secondItem="XYi-Yz-c1r" secondAttribute="bottom" id="Fda-70-Z5W"/>
+                            <constraint firstAttribute="centerX" secondItem="dLM-Or-FCr" secondAttribute="centerX" id="NV1-bw-UDI"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="height" secondItem="VVy-v6-biz" secondAttribute="height" id="bIj-TZ-xa3"/>
+                            <constraint firstItem="dLM-Or-FCr" firstAttribute="top" secondItem="l6o-sN-Que" secondAttribute="bottom" id="c7F-wp-0Oj"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="width" secondItem="dra-HF-ZkZ" secondAttribute="width" id="f97-N1-pGD"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="leading" secondItem="VVy-v6-biz" secondAttribute="leading" id="jks-s2-0wb"/>
+                            <constraint firstAttribute="width" secondItem="dLM-Or-FCr" secondAttribute="width" id="kb5-Kw-7uf"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="top" secondItem="VVy-v6-biz" secondAttribute="top" id="r5u-z2-uJa"/>
+                            <constraint firstItem="l6o-sN-Que" firstAttribute="width" secondItem="VVy-v6-biz" secondAttribute="width" id="skb-Wl-gZe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Cart" id="zh2-P0-3iz">
-                        <barButtonItem key="rightBarButtonItem" title="Buy" id="nMK-Gy-H9p"/>
-                    </navigationItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="kOf-5u-BXZ"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="shopCartView" destination="VVy-v6-biz" id="kcd-wN-4EP"/>
+                        <outlet property="shopListView" destination="l6o-sN-Que" id="SMv-eg-Ks8"/>
+                        <outlet property="shopTabBar" destination="dLM-Or-FCr" id="QF3-zD-WJR"/>
+                        <outlet property="tabNavigationBar" destination="kOf-5u-BXZ" id="fRw-xg-9L3"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cXe-Gb-h01" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DxQ-5O-djY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="2075"/>
+            <point key="canvasLocation" x="3553" y="3555"/>
         </scene>
-        <!--Shop List-->
-        <scene sceneID="Id5-Fm-xmI">
+        <!--Shop List View Controller-->
+        <scene sceneID="z7P-w7-Dmu">
             <objects>
-                <viewController title="Shop List" id="R86-xc-NW6" sceneMemberID="viewController">
+                <viewController title="Shop List View Controller" automaticallyAdjustsScrollViewInsets="NO" id="gIS-oR-UKb" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="2cx-6B-56l"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZcN-W5-Txa"/>
+                        <viewControllerLayoutGuide type="top" id="05H-hV-ZEf"/>
+                        <viewControllerLayoutGuide type="bottom" id="m8C-jO-Z5s"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fh8-e3-ebv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="HMl-Rt-apI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search for Items" translatesAutoresizingMaskIntoConstraints="NO" id="faZ-cF-oem">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="yes"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8BZ-Go-71J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="579"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search for Store Items" translatesAutoresizingMaskIntoConstraints="NO" id="XvC-mW-hur">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dAx-EH-oSI">
-                                <rect key="frame" x="0.0" y="108" width="600" height="443"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m8C-jO-Z5s" firstAttribute="top" secondItem="8BZ-Go-71J" secondAttribute="bottom" id="6lr-ze-MNM"/>
+                            <constraint firstItem="8BZ-Go-71J" firstAttribute="top" secondItem="XvC-mW-hur" secondAttribute="bottom" id="7to-UO-Tx7"/>
+                            <constraint firstAttribute="centerX" secondItem="XvC-mW-hur" secondAttribute="centerX" id="GMt-lq-RtI"/>
+                            <constraint firstItem="XvC-mW-hur" firstAttribute="top" secondItem="05H-hV-ZEf" secondAttribute="bottom" id="QuA-Rp-YEQ"/>
+                            <constraint firstItem="XvC-mW-hur" firstAttribute="width" secondItem="HMl-Rt-apI" secondAttribute="width" id="SQk-nL-FV8"/>
+                            <constraint firstAttribute="width" secondItem="8BZ-Go-71J" secondAttribute="width" id="hxJ-kg-Fsl"/>
+                            <constraint firstItem="XvC-mW-hur" firstAttribute="centerX" secondItem="8BZ-Go-71J" secondAttribute="centerX" id="ld1-a4-4PP"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNs-aa-3L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3275" y="4409.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ost-mt-xaP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9kL-IY-jhP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mte-Qt-ntl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VfT-v8-31Y" kind="relationship" relationship="rootViewController" id="GLO-Ty-JPX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b9J-EH-yRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2831" y="3555"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Kix-kx-KGX">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="q0T-34-KKQ" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u2M-k2-dee"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sqj-R3-6t3"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="yIK-it-gI5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Szl-At-69N">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="faZ-cF-oem" firstAttribute="width" secondItem="fh8-e3-ebv" secondAttribute="width" id="1cF-T1-kdc"/>
-                            <constraint firstAttribute="centerX" secondItem="dAx-EH-oSI" secondAttribute="centerX" id="6iI-Ro-lpt"/>
-                            <constraint firstAttribute="width" secondItem="dAx-EH-oSI" secondAttribute="width" id="BxQ-Hm-dxU"/>
-                            <constraint firstItem="dAx-EH-oSI" firstAttribute="top" secondItem="faZ-cF-oem" secondAttribute="bottom" id="Euh-I7-9xM"/>
-                            <constraint firstItem="ZcN-W5-Txa" firstAttribute="top" secondItem="dAx-EH-oSI" secondAttribute="bottom" id="MsU-Tc-nBq"/>
-                            <constraint firstAttribute="centerX" secondItem="faZ-cF-oem" secondAttribute="centerX" id="SKj-vr-6Mf"/>
-                            <constraint firstItem="faZ-cF-oem" firstAttribute="top" secondItem="2cx-6B-56l" secondAttribute="bottom" id="oYb-n6-bP3"/>
+                            <constraint firstAttribute="centerX" secondItem="Szl-At-69N" secondAttribute="centerX" id="WkX-gT-Kq2"/>
+                            <constraint firstAttribute="centerY" secondItem="Szl-At-69N" secondAttribute="centerY" id="bKT-0I-8IC"/>
+                            <constraint firstItem="Szl-At-69N" firstAttribute="width" secondItem="yIK-it-gI5" secondAttribute="width" id="gK5-QT-WBx"/>
+                            <constraint firstAttribute="centerY" secondItem="Szl-At-69N" secondAttribute="centerY" constant="-66" id="j5P-Gj-JCk"/>
+                            <constraint firstItem="Szl-At-69N" firstAttribute="height" secondItem="yIK-it-gI5" secondAttribute="height" id="v9I-aP-UnA"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="j5P-Gj-JCk"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Shop List" id="tK8-Du-3Dj">
-                        <barButtonItem key="rightBarButtonItem" title="Buy" id="tEg-fH-duL"/>
-                    </navigationItem>
+                    <toolbarItems/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Fb3-D0-idP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mZY-X5-eJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987" y="1413"/>
-        </scene>
-        <!--Your Cart / Shop List-->
-        <scene sceneID="ca9-OC-p3h">
-            <objects>
-                <tabBarController title="Your Cart / Shop List" id="HTx-fz-PBv" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="K3A-H3-8zl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="sFA-4v-0DY" kind="relationship" relationship="viewControllers" id="HwF-1h-6zl"/>
-                        <segue destination="wvt-3r-QAk" kind="relationship" relationship="viewControllers" id="BJ9-iz-ykM"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0ho-We-Qbl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1355" y="1744"/>
-        </scene>
-        <!--Shop List Navigation-->
-        <scene sceneID="vKo-6V-dZj">
-            <objects>
-                <navigationController title="Shop List Navigation" automaticallyAdjustsScrollViewInsets="NO" id="sFA-4v-0DY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop List" image="List" id="wUz-YF-MRr"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8AO-9C-Hny">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="R86-xc-NW6" kind="relationship" relationship="rootViewController" id="str-Wy-eDS"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IW9-2s-UIc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2175" y="1413"/>
-        </scene>
-        <!--Your Cart Navigation-->
-        <scene sceneID="zbf-oC-n3v">
-            <objects>
-                <navigationController title="Your Cart Navigation" automaticallyAdjustsScrollViewInsets="NO" id="wvt-3r-QAk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Cart" image="Cart" id="UA8-yQ-9YB"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5bg-tF-QSD">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="nZl-rL-zFZ" kind="relationship" relationship="rootViewController" id="of9-eO-99F"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Z9h-ur-Po6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2175" y="2075"/>
+            <point key="canvasLocation" x="3772" y="4417.5"/>
         </scene>
     </scenes>
     <resources>
