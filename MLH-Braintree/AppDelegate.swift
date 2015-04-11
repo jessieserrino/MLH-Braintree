@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         manager = BeaconManager()
         manager?.start()
         return true
+    }
+    
+    func application(handleClosestBeaconChange beacon: CLBeacon) {
+        let center = NSNotificationCenter.defaultCenter()
+        let notification = NSNotification(name: "Closest Beacon Center", object: self, userInfo: ["Beacon": beacon])
+        center.postNotification(notification)
     }
 
     func applicationWillResignActive(application: UIApplication) {
