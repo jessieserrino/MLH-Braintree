@@ -1,5 +1,5 @@
 //
-//  CurrentCartViewController.swift
+//  CartViewController.swift
 //  MLH-Braintree
 //
 //  Created by Jessie Serrino on 4/11/15.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CurrentCartViewController: UIViewController {
+class CartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

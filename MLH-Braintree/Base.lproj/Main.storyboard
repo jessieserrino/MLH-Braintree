@@ -60,16 +60,58 @@
                         <outlet property="shopListView" destination="l6o-sN-Que" id="SMv-eg-Ks8"/>
                         <outlet property="shopTabBar" destination="dLM-Or-FCr" id="QF3-zD-WJR"/>
                         <outlet property="tabNavigationBar" destination="kOf-5u-BXZ" id="fRw-xg-9L3"/>
+                        <segue destination="Bg3-0v-An8" kind="show" identifier="CheckoutSegue" id="WSl-Yl-ueo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DxQ-5O-djY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="3555"/>
+            <point key="canvasLocation" x="3555" y="3555"/>
+        </scene>
+        <!--Checkout View Controller-->
+        <scene sceneID="eM6-sO-xXP">
+            <objects>
+                <viewController id="Bg3-0v-An8" customClass="CheckoutViewController" customModule="MLH_Braintree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nlA-yE-tIC"/>
+                        <viewControllerLayoutGuide type="bottom" id="15b-dj-uxw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hDu-i1-XQ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <segue destination="2vu-Vq-Bbm" kind="show" identifier="ReceiptSegue" id="kBL-wQ-aAe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6TS-bg-iHB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4122" y="3555"/>
+        </scene>
+        <!--Receipt View Controller-->
+        <scene sceneID="V4W-ky-tir">
+            <objects>
+                <viewController id="2vu-Vq-Bbm" customClass="ReceiptViewController" customModule="MLH_Braintree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9LS-hE-mca"/>
+                        <viewControllerLayoutGuide type="bottom" id="bLp-Xv-rsh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xqJ-jE-mbi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gU-RM-QLj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4684" y="3555"/>
         </scene>
         <!--Shop List View Controller-->
         <scene sceneID="z7P-w7-Dmu">
             <objects>
-                <viewController title="Shop List View Controller" automaticallyAdjustsScrollViewInsets="NO" id="gIS-oR-UKb" sceneMemberID="viewController">
+                <viewController title="Shop List View Controller" automaticallyAdjustsScrollViewInsets="NO" id="gIS-oR-UKb" customClass="ShopListViewController" customModule="MLH_Braintree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="05H-hV-ZEf"/>
                         <viewControllerLayoutGuide type="bottom" id="m8C-jO-Z5s"/>
@@ -123,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="2831" y="3555"/>
         </scene>
-        <!--View Controller-->
+        <!--Cart View Controller-->
         <scene sceneID="Kix-kx-KGX">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="q0T-34-KKQ" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="q0T-34-KKQ" customClass="CartViewController" customModule="MLH_Braintree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="u2M-k2-dee"/>
                         <viewControllerLayoutGuide type="bottom" id="Sqj-R3-6t3"/>
