@@ -8,8 +8,31 @@
 
 import UIKit
 
-class ShopListViewController: UIViewController {
+class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    @IBOutlet weak var menuTableView: UITableView! {
+        didSet {
+            menuTableView.delegate = self
+            menuTableView.dataSource = self
+        }
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! UITableViewCell
+        cell.textLabel?.text = "My Favorite Item"
+        cell.detailTextLabel?.text = "99£"
+        //image here
+        return cell
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
