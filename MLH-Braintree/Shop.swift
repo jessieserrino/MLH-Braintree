@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import CoreLocation
 
 class Shop {
-    var beacon: Beacon
+    var beacon: CLBeacon
     var name: String
     final var id: Int
     
-    init(beacon: Beacon, name: String, id: Int) {
+    init(beacon: CLBeacon, name: String, id: Int) {
         self.beacon = beacon
         self.name = name
         self.id = id
