@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */; };
 		3FF8FD541AD96D0600597798 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD531AD96D0600597798 /* Shop.swift */; };
-		3FF8FD561AD96EC300597798 /* Beacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD551AD96EC300597798 /* Beacon.swift */; };
 		3FF8FD581AD9709700597798 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD571AD9709700597798 /* Item.swift */; };
 		3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD591AD9712500597798 /* Cart.swift */; };
 		910B84021AD9C3AF00412CDE /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B84011AD9C3AF00412CDE /* CartViewController.swift */; };
@@ -37,8 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
+		3F2F11151AD9986400AE3DBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3FF8FD531AD96D0600597798 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
-		3FF8FD551AD96EC300597798 /* Beacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beacon.swift; sourceTree = "<group>"; };
 		3FF8FD571AD9709700597798 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3FF8FD591AD9712500597798 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		910B84011AD9C3AF00412CDE /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
@@ -132,10 +133,10 @@
 		911DC6951AD96C540065C967 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				3FF8FD531AD96D0600597798 /* Shop.swift */,
 				3FF8FD591AD9712500597798 /* Cart.swift */,
 				3FF8FD571AD9709700597798 /* Item.swift */,
-				3FF8FD551AD96EC300597798 /* Beacon.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -161,6 +162,7 @@
 		913C7CDA1AD952BE00C5EBF7 = {
 			isa = PBXGroup;
 			children = (
+				3F2F11151AD9986400AE3DBA /* CoreLocation.framework */,
 				913C7CE51AD952BE00C5EBF7 /* MLH-Braintree */,
 				913C7CFE1AD952BE00C5EBF7 /* MLH-BraintreeTests */,
 				913C7CE41AD952BE00C5EBF7 /* Products */,
@@ -318,13 +320,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */,
-				3FF8FD561AD96EC300597798 /* Beacon.swift in Sources */,
 				3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */,
 				913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */,
 				91672D721AD99DC900F14257 /* TabViewController.swift in Sources */,
 				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
 				910B84021AD9C3AF00412CDE /* CartViewController.swift in Sources */,
 				91672D681AD97EC700F14257 /* ItemDetailViewController.swift in Sources */,
+				3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */,
 				3FF8FD541AD96D0600597798 /* Shop.swift in Sources */,
 				91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */,
 				91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */,
