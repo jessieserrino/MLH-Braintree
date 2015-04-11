@@ -13,19 +13,10 @@ class URLRequestHelper: NSObject {
     
     class func httpRequest() -> NSURLRequest
     {
-        var request = NSMutableURLRequest(URL: NSURL(string: "http://google.com")!)
+        var request = NSMutableURLRequest(URL: NSURL(string: "http://brainbeacon.herokuapp.com/braintree/test-page")!)
         var session = NSURLSession.sharedSession()
-        request.HTTPMethod = "POST"
+        request.HTTPMethod = "GET"
         
-        var params = ["username":"jameson", "password":"password"] as Dictionary<String, String>
-        
-        
-        var err: NSError?
-
-        request.HTTPBody = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-
         
         return request
     }

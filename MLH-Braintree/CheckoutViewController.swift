@@ -12,6 +12,9 @@ import WebKit
 class CheckoutViewController: UIViewController {
 
     var webView: WKWebView!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +23,6 @@ class CheckoutViewController: UIViewController {
 
         
         self.loadCheckoutPage()
-        // Do any additional setup after loading the view
         
         let request = URLRequestHelper.httpRequest()   
                 
