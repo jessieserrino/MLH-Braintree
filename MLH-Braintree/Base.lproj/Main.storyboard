@@ -24,12 +24,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="k90-AU-m8G" firstAttribute="top" secondItem="4ac-8R-iI6" secondAttribute="bottom" id="522-nH-Mlk"/>
-                            <constraint firstItem="4ac-8R-iI6" firstAttribute="top" secondItem="gZl-Wy-gt7" secondAttribute="bottom" id="7X4-sL-jAx"/>
                             <constraint firstItem="4ac-8R-iI6" firstAttribute="width" secondItem="n5C-Og-Tk0" secondAttribute="width" id="PHT-2W-lqO"/>
+                            <constraint firstItem="4ac-8R-iI6" firstAttribute="top" secondItem="gZl-Wy-gt7" secondAttribute="bottom" id="S0I-oY-kbg"/>
                             <constraint firstAttribute="centerX" secondItem="4ac-8R-iI6" secondAttribute="centerX" id="jTH-w6-WMh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Your Cart" id="zh2-P0-3iz"/>
+                    <navigationItem key="navigationItem" title="Your Cart" id="zh2-P0-3iz">
+                        <barButtonItem key="rightBarButtonItem" title="Purchase" id="nMK-Gy-H9p"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cXe-Gb-h01" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +53,7 @@
                                 <rect key="frame" x="0.0" y="64" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dAx-EH-oSI">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dAx-EH-oSI">
                                 <rect key="frame" x="0.0" y="108" width="600" height="443"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
@@ -67,7 +69,9 @@
                             <constraint firstItem="faZ-cF-oem" firstAttribute="top" secondItem="2cx-6B-56l" secondAttribute="bottom" id="oYb-n6-bP3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Shop List" id="tK8-Du-3Dj"/>
+                    <navigationItem key="navigationItem" title="Shop List" id="tK8-Du-3Dj">
+                        <barButtonItem key="rightBarButtonItem" title="Purchase" id="tEg-fH-duL"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fb3-D0-idP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +100,7 @@
         <scene sceneID="vKo-6V-dZj">
             <objects>
                 <navigationController title="Shop List Navigation" automaticallyAdjustsScrollViewInsets="NO" id="sFA-4v-0DY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop List" id="wUz-YF-MRr"/>
+                    <tabBarItem key="tabBarItem" title="Shop List" image="List" id="wUz-YF-MRr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8AO-9C-Hny">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -115,7 +119,7 @@
         <scene sceneID="zbf-oC-n3v">
             <objects>
                 <navigationController title="Your Cart Navigation" automaticallyAdjustsScrollViewInsets="NO" id="wvt-3r-QAk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Your Cart" id="UA8-yQ-9YB"/>
+                    <tabBarItem key="tabBarItem" title="Your Cart" image="Cart" id="UA8-yQ-9YB"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5bg-tF-QSD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -131,4 +135,8 @@
             <point key="canvasLocation" x="2175" y="2075"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Cart" width="21" height="21"/>
+        <image name="List" width="16" height="16"/>
+    </resources>
 </document>
