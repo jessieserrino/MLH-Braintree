@@ -141,6 +141,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="shopListTableView" destination="8BZ-Go-71J" id="DzY-A3-oLh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNs-aa-3L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -197,6 +200,9 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="cartTableView" destination="Szl-At-69N" id="Cpo-3H-FLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZY-X5-eJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
