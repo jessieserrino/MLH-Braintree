@@ -20,16 +20,18 @@ class CheckoutViewController: UIViewController {
 
         
         self.loadCheckoutPage()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view
         
-        
-        let url = NSURL(string:"http://brainbeacon.herokuapp.com/braintree/checkout")
-        let request = NSURLRequest(URL:url!)
-        
+        let request = URLRequestHelper.httpRequest()   
+                
         
         webView.loadRequest(request)
     }
 
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

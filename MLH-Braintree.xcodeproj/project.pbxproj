@@ -17,6 +17,7 @@
 		910B84111AD9C6A400412CDE /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B840F1AD9C6A400412CDE /* CartTableViewCell.swift */; };
 		910B84121AD9C6A400412CDE /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 910B84101AD9C6A400412CDE /* CartTableViewCell.xib */; };
 		910B84161AD9CAFB00412CDE /* ShopManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B84151AD9CAFB00412CDE /* ShopManager.swift */; };
+		910B84181AD9DE5100412CDE /* URLRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 910B84171AD9DE5100412CDE /* URLRequestHelper.swift */; };
 		913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */; };
 		913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 913C7CEA1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld */; };
 		913C7CF11AD952BE00C5EBF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913C7CEF1AD952BE00C5EBF7 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 		910B840F1AD9C6A400412CDE /* CartTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		910B84101AD9C6A400412CDE /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		910B84151AD9CAFB00412CDE /* ShopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopManager.swift; sourceTree = "<group>"; };
+		910B84171AD9DE5100412CDE /* URLRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestHelper.swift; sourceTree = "<group>"; };
 		913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLH-Braintree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C7CE71AD952BE00C5EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				910B84151AD9CAFB00412CDE /* ShopManager.swift */,
+				910B84171AD9DE5100412CDE /* URLRequestHelper.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				3FF8FD541AD96D0600597798 /* Shop.swift in Sources */,
 				91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */,
 				91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */,
+				910B84181AD9DE5100412CDE /* URLRequestHelper.swift in Sources */,
 				910B84111AD9C6A400412CDE /* CartTableViewCell.swift in Sources */,
 				91672D641AD97EB400F14257 /* CheckoutViewController.swift in Sources */,
 			);
