@@ -23,6 +23,7 @@
 		91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D691AD97ECE00F14257 /* ReceiptViewController.swift */; };
 		91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D6B1AD97ED400F14257 /* ShopListViewController.swift */; };
 		91672D6E1AD97ED400F14257 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D6C1AD97ED400F14257 /* TutorialViewController.swift */; };
+		91672D721AD99DC900F14257 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D711AD99DC900F14257 /* TabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		91672D691AD97ECE00F14257 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		91672D6B1AD97ED400F14257 /* ShopListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		91672D6C1AD97ED400F14257 /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		91672D711AD99DC900F14257 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910B83FF1AD9C34C00412CDE /* Shop Tab */ = {
+			isa = PBXGroup;
+			children = (
+				91672D6B1AD97ED400F14257 /* ShopListViewController.swift */,
+				91672D651AD97EC100F14257 /* CurrentCartViewController.swift */,
+			);
+			name = "Shop Tab";
+			sourceTree = "<group>";
+		};
 		911DC6951AD96C540065C967 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,12 +109,12 @@
 		911DC6971AD96C610065C967 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				91672D6B1AD97ED400F14257 /* ShopListViewController.swift */,
+				910B83FF1AD9C34C00412CDE /* Shop Tab */,
 				91672D6C1AD97ED400F14257 /* TutorialViewController.swift */,
 				91672D691AD97ECE00F14257 /* ReceiptViewController.swift */,
 				91672D671AD97EC700F14257 /* ItemDetailViewController.swift */,
-				91672D651AD97EC100F14257 /* CurrentCartViewController.swift */,
 				91672D631AD97EB400F14257 /* CheckoutViewController.swift */,
+				91672D711AD99DC900F14257 /* TabViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -271,6 +282,7 @@
 				913C7CEC1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld in Sources */,
 				3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */,
 				913C7CE91AD952BE00C5EBF7 /* AppDelegate.swift in Sources */,
+				91672D721AD99DC900F14257 /* TabViewController.swift in Sources */,
 				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
 				91672D681AD97EC700F14257 /* ItemDetailViewController.swift in Sources */,
 				3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */,
