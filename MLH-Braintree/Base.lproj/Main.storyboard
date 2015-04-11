@@ -173,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNs-aa-3L3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3275" y="4409.5"/>
+            <point key="canvasLocation" x="3295" y="4419.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ost-mt-xaP">
@@ -226,10 +226,13 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="cartTableView" destination="Szl-At-69N" id="Cpo-3H-FLV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mZY-X5-eJA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3772" y="4417.5"/>
+            <point key="canvasLocation" x="3810" y="4419.5"/>
         </scene>
     </scenes>
     <resources>

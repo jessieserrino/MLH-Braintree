@@ -44,6 +44,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         // Dispose of any resources that can be recreated.
     }
     
+    // Getting the search going
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
+    {
+    
+    }
 
     /*
     // MARK: - Navigation

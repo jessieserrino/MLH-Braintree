@@ -10,6 +10,7 @@ import UIKit
 
 class CartViewController: UIViewController {
 
+    @IBOutlet var cartTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 

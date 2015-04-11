@@ -19,4 +19,6 @@ class Shop {
         self.name = name
         self.id = id
     }
+    
+    
 }
