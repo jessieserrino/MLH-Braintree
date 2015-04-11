@@ -58,6 +58,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		911DC6951AD96C540065C967 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		911DC6961AD96C5B0065C967 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		911DC6971AD96C610065C967 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 		913C7CDA1AD952BE00C5EBF7 = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +100,9 @@
 		913C7CE51AD952BE00C5EBF7 /* MLH-Braintree */ = {
 			isa = PBXGroup;
 			children = (
+				911DC6971AD96C610065C967 /* View Controllers */,
+				911DC6961AD96C5B0065C967 /* Utilities */,
+				911DC6951AD96C540065C967 /* Models */,
 				913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */,
 				913C7CED1AD952BE00C5EBF7 /* ViewController.swift */,
 				913C7CEF1AD952BE00C5EBF7 /* Main.storyboard */,
@@ -409,6 +433,7 @@
 				913C7D071AD952BE00C5EBF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		913C7D081AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-BraintreeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +442,7 @@
 				913C7D0A1AD952BE00C5EBF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
