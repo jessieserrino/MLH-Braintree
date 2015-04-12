@@ -10,9 +10,14 @@ import UIKit
 import CoreLocation
 
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var items = [[1, "Calamari", 9.00], [2, "Filet splendito", 14.00], [3, "Mozzarella marinara", 7.45], [4, "Parmesan crusted chicken salad", 10.00], [5, "Margherita", 5.00]]
-    var items2 = [[1, "Jersey Dress", 12.95], [2, "Nep Jersey T-shirt", 9.95], [3, "Denim Shorts", 19.95], [4, "Men's Johnston & Murphy Atchison Cap Toe", 100.52], [5, "Blazer Slim fit", 69.95]]
-    var items3 = [[1, "Bristol", 62.00], [2, "Birmingham", 38.80], [3, "Liverpool", 87.60], [4, "Manchester", 89.30], [5, "Edinburgh", 134.20]]
+
+    
+    var shopItems : NSMutableArray? {
+        didSet {
+            menuTableView.reloadData()
+        }
+    }
+
     
     var beacon : Int? {
         didSet {
@@ -50,19 +55,12 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ShopListTableViewCell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ShopListTableViewCell
         if let currentBeacon = beacon {
-            cell.itemImageView?.image = UIImage(named: "\(currentBeacon)_\(indexPath.row+1)")
-            switch currentBeacon {
-            case 1412:
-                cell.itemNameLabel?.text = "\(items[indexPath.row][1])"
-                cell.itemPriceLabel?.text = String(format: "%.2f£", items[indexPath.row][2] as! Double)
-            case 11617:
-                cell.itemNameLabel?.text = "\(items2[indexPath.row][1])"
-                cell.itemPriceLabel?.text = String(format: "%.2f£", items2[indexPath.row][2] as! Double)
-            case 36593:
-                cell.itemNameLabel?.text = "\(items3[indexPath.row][1])"
-                cell.itemPriceLabel?.text = String(format: "%.2f£", items3[indexPath.row][2] as! Double)
-            default: break
-            }
+            let item = self.shopItems!.objectAtIndex(indexPath.item) as! Item
+
+            cell.itemImageView?.image = UIImage(named: item.image)
+            cell.itemNameLabel?.text = item.description //"\(items[indexPath.row][1])"
+            cell.itemPriceLabel?.text = String(format: "%.2f£", item.price)
+            cell.itemQuantityLabel?.text = String(format: "%i",  12)
         }
         
         
@@ -117,6 +115,9 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                     localNotification.alertBody = "Welcome to \(name)! Just swipe to start shopping."
                     localNotification.fireDate = NSDate(timeIntervalSinceNow: 0.5)
                     UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+                    
+                    
+                    self.shopItems = Shop.shopItems(self.beacon!)
                 }
 
             }

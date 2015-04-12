@@ -12,12 +12,12 @@ class Item {
     final var id: Int
     var image: String
     var price: Double
-    var shopID: Int
+    var description: String
     
-    init(id: Int, price: Double, shopID: Int, image:String) {
+    init(id: Int, price: Double, description: String, image:String) {
         self.id = id
         self.price = price
-        self.shopID = id
+        self.description = description
         self.image = image
     }
 }
