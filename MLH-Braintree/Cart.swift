@@ -10,13 +10,26 @@ import Foundation
 class Cart {
     var cart = [Int:Int]()
     
-    init(itemIDs:[Int]) {
-        for itemID in itemIDs {
-            cart[itemID] = 1
-        }
+    init() {
+
     }
     
-    func addToCart (itemIDs: [Int]) {
+    func addToCart(item: Item)
+    {
+        let itemID = item.id
+        if let item = cart[itemID] {
+            cart[itemID] = item + 1
+        } else {
+            cart[itemID] = 1
+        }    }
+    
+    
+    func inCart(item: Item) -> Bool
+    {
+
+    }
+    
+    /*func addToCart (itemIDs: [Int]) {
         for itemID in itemIDs {
             if let item = cart[itemID] {
                 cart[itemID] = item + 1
@@ -24,5 +37,5 @@ class Cart {
                 cart[itemID] = 1
             }
         }
-    }
+    }*/
 }
