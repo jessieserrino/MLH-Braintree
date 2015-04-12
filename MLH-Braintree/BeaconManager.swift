@@ -41,7 +41,7 @@ class BeaconManager : NSObject, CLLocationManagerDelegate {
         for beacon in beacons {
             if let myBeacon = beacon as? CLBeacon {
                 if ((myBeacon.major == 1412 && myBeacon.minor == 1412) || (myBeacon.major == 11617 && myBeacon.minor == 37843) || (myBeacon.major == 36593 && myBeacon.minor == 63260)) {
-                    //println("Beacon \(myBeacon.major): \(myBeacon.accuracy)")
+                    println("Beacon \(myBeacon.major): \(myBeacon.accuracy)")
                     myBeacons.append(myBeacon);
                 }
             }
@@ -56,8 +56,6 @@ class BeaconManager : NSObject, CLLocationManagerDelegate {
                 println("Closest is now \(self.closest!.major)")
             }
         }
-        
-        println()
     }
     
     func locationManager(manager: CLLocationManager!, monitoringDidFailForRegion region: CLRegion!, withError error: NSError!) {
