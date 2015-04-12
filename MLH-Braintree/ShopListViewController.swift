@@ -91,7 +91,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 var shopName: String?
                 switch newBeacon.major {
                 case 1412:
-                    shopName = "Giovanni's Italian Restaurant"
+                    shopName = "Giovanni's"
                 case 11617:
                     shopName = "H&M"
                 case 36593:

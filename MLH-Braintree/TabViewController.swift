@@ -70,9 +70,9 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
         dropInViewController.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Cancel, target: self, action: Selector("userDidCancel"))
         
         //Customize the UI
-        dropInViewController.summaryTitle = "A Braintree Mug"
-        dropInViewController.summaryDescription = "Enough for a good cup of coffee"
-        dropInViewController.displayAmount = "$10"
+        dropInViewController.summaryTitle = "Your BeaconCart"
+        dropInViewController.summaryDescription = "So much swag!"
+        dropInViewController.displayAmount = "$15"
         
         var navigationController: UINavigationController = UINavigationController(rootViewController: dropInViewController)
         
@@ -89,7 +89,7 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
     */
     
     func postNonce(paymentMethodNonce: String) {
-        var parameters = ["payment_method_nonce": paymentMethodNonce, "amount": "65.54", "number": "+447477460951"]
+        var parameters = ["payment_method_nonce": paymentMethodNonce, "amount": "15", "number": "+447477460951"]
         
         manager.POST("http://brainbeacon.herokuapp.com/braintree/checkout",
             parameters: parameters,

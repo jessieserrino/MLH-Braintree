@@ -36,8 +36,8 @@
                                 <constraint firstAttribute="width" constant="80" id="b1w-An-uCQ"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to our shop!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-hz-I1C">
-                            <rect key="frame" x="0.0" y="95" width="280" height="25"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-hz-I1C">
+                            <rect key="frame" x="0.0" y="95" width="280" height="57"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="Hf1-Rz-uzI"/>
                             </constraints>
