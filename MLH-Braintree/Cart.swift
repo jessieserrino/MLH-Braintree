@@ -26,7 +26,7 @@ class Cart {
     
     func inCart(item: Item) -> Bool
     {
-
+        return false
     }
     
     /*func addToCart (itemIDs: [Int]) {
