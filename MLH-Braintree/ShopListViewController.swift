@@ -25,6 +25,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         didSet {
             menuTableView.delegate = self
             menuTableView.dataSource = self
+            menuTableView.registerNib(UINib(nibName: "ShopListTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
         }
     }
     
@@ -37,13 +38,13 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! UITableViewCell
+        let cell : ShopListTableViewCell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ShopListTableViewCell
         if let currentBeacon = beacon {
-            cell.textLabel?.text = items[currentBeacon]
+            cell.itemImageView?.image = UIImage(named: "Cart")
+            cell.itemNameLabel?.text = items[currentBeacon];
+            cell.itemPriceLabel?.text = "$99"
         }
         
-        cell.detailTextLabel?.text = "99£"
-        //image here
         return cell
     }
     
@@ -54,6 +55,9 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         let queue = NSOperationQueue.mainQueue()
         let appDelegate = UIApplication.sharedApplication().delegate
         // Do any additional setup after loading the view.
+        
+        
+        
         
         center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
             if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
