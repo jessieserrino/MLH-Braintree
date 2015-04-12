@@ -30,14 +30,14 @@ class Shop {
         switch(shopNumber)
         {
             case 1412:
-                let items = [[1, "Calamari", 9.00], [2, "Filet splendito", 14.00], [3, "Mozzarella marinara", 7.45], [4, "Parmesan crusted chicken salad", 10.00], [5, "Margherita", 5.00]]
+                let items = [[1, "Calamari", 9.00], [2, "Filet splendito", 14.00], [3, "Mozzarella", 7.45], [4, "Chicken salad", 10.00], [5, "Margherita", 5.00]]
                 for item in items
                 {
                     shopArray.addObject(Item(id: item[0] as! Int, price: item[2] as! Double, description: item[1] as! String, image: String(format: "%li_%li", shopNumber, item[0] as! Int)))
                 }
                 break;
             case 11617:
-                var items = [[1, "Jersey Dress", 12.95], [2, "Nep Jersey T-shirt", 9.95], [3, "Denim Shorts", 19.95], [4, "Men's Johnston & Murphy Atchison Cap Toe", 100.52], [5, "Blazer Slim fit", 69.95]]
+                var items = [[1, "Jersey Dress", 12.95], [2, "Nep Jersey", 9.95], [3, "Denim Shorts", 19.95], [4, "Men's Cap Toe", 100.52], [5, "Blazer Slim fit", 69.95]]
 
                 for item in items
                 {
