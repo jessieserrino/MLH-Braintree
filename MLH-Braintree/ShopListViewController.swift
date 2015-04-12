@@ -62,6 +62,26 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
             if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
                 self.beacon = newBeacon.major.integerValue
+                
+                var localNotification:UILocalNotification = UILocalNotification()
+                localNotification.alertAction = "shop"
+                var shopName: String?
+                switch newBeacon.major {
+                case 1412:
+                    shopName = "Giovanni's Italian Restaurant"
+                case 11617:
+                    shopName = "H&M"
+                case 36593:
+                    shopName = "King's Cross Station"
+                default:
+                    break;
+                }
+                
+                if let name = shopName {
+                    localNotification.alertBody = "Welcome to \(name)! Just swipe to start shopping."
+                    localNotification.fireDate = NSDate(timeIntervalSinceNow: 0.5)
+                    UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
+                }
             }
         }
     }
