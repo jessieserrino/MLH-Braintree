@@ -16,23 +16,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VVy-v6-biz" userLabel="Your Cart">
-                                <rect key="frame" x="127" y="127" width="414" height="623"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVy-v6-biz" userLabel="Your Cart">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <connections>
                                     <segue destination="q0T-34-KKQ" kind="embed" id="c9k-0K-TTQ"/>
                                 </connections>
                             </containerView>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLM-Or-FCr">
+                            <tabBar opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dLM-Or-FCr">
                                 <rect key="frame" x="0.0" y="687" width="414" height="49"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
                                     <tabBarItem title="Shop List" image="List" id="H8V-Mx-gnO"/>
                                     <tabBarItem title="Your Cart" image="Cart" id="jho-L8-rbV"/>
                                 </items>
-                                <color key="barTintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <color key="tintColor" red="0.41176470590000003" green="0.76862745099999996" blue="0.65490196079999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="0.17000000000000001" colorSpace="calibratedRGB"/>
                             </tabBar>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-sN-Que" userLabel="Shop List">
-                                <rect key="frame" x="195" y="120" width="414" height="623"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l6o-sN-Que" userLabel="Shop List">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <connections>
                                     <segue destination="gIS-oR-UKb" kind="embed" id="lSr-9b-Ncb"/>
                                 </connections>
