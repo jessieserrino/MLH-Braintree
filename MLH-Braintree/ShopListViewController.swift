@@ -12,7 +12,7 @@ import CoreLocation
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
-    let cart = Cart()
+    var cart : Cart?
     
     var shopItems : NSMutableArray? {
         didSet {
@@ -69,7 +69,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
             cell.itemImageView?.image = UIImage(named: item.image)
             cell.itemNameLabel?.text = item.description //"\(items[indexPath.row][1])"
             cell.itemPriceLabel?.text = String(format: "%.2f£", item.price)
-            cell.itemQuantityLabel?.text = String(format: "%i", self.cart.amountInCart(item))
+            cell.itemQuantityLabel?.text = String(format: "%i", self.cart!.amountInCart(item))
         }
         
         
@@ -82,6 +82,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         let center = NSNotificationCenter.defaultCenter()
         let queue = NSOperationQueue.mainQueue()
         let appDelegate = UIApplication.sharedApplication().delegate
+        self.cart = Cart()
         
         center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
             if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
@@ -127,6 +128,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                     
                     
                     self.shopItems = Shop.shopItems(self.beacon!)
+                    self.cart = Cart()
                 }
 
             }
@@ -140,7 +142,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.cart.addToCart(self.shopItems!.objectAtIndex(indexPath.section) as! Item)
+        self.cart!.addToCart(self.shopItems!.objectAtIndex(indexPath.section) as! Item)
         tableView.reloadData()
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
 
