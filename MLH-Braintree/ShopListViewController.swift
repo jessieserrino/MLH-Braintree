@@ -19,11 +19,9 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     
-    var beacon : Int? {
-        didSet {
-            menuTableView.reloadData()
-        }
-    }
+    var anotherModalViewIsVisible = false;
+    
+    var beacon : Int?
     
     @IBOutlet var menuSearchBar: UISearchBar!
 
@@ -93,21 +91,30 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 if let name = shopName {
                     var state = UIApplication.sharedApplication().applicationState
                     if state == UIApplicationState.Active {
-                        let view = ModalView.instantiateFromNib("ModalView2")
-                        view.titleLabel.text = "Welcome to \(name)"
-                        let window = UIApplication.sharedApplication().delegate?.window!
-                        let modal = PathDynamicModal()
-                        modal.showMagnitude = 200.0
-                        modal.closeMagnitude = 130.0
-                        view.closeButtonHandler = {[weak modal] in
-                            modal?.closeWithLeansRandom()
-                            return
+                        
+                        if !self.anotherModalViewIsVisible {
+                            let view = ModalView.instantiateFromNib("ModalView2")
+                            view.titleLabel.text = "Welcome to \(name)"
+                            let window = UIApplication.sharedApplication().delegate?.window!
+                            let modal = PathDynamicModal()
+                            modal.showMagnitude = 200.0
+                            modal.closeMagnitude = 130.0
+                            view.closeButtonHandler = {[weak modal] in
+                                self.anotherModalViewIsVisible = false
+                                self.menuTableView.reloadData()
+                                modal?.closeWithLeansRandom()
+                                return
+                            }
+                            view.bottomButtonHandler = {[weak modal] in
+                                self.anotherModalViewIsVisible = false
+                                modal?.closeWithLeansRandom()
+                                return
+                            }
+                            modal.show(modalView: view, inView: window!)
+                            self.anotherModalViewIsVisible = true
+                        } else {
+                            
                         }
-                        view.bottomButtonHandler = {[weak modal] in
-                            modal?.closeWithLeansRandom()
-                            return
-                        }
-                        modal.show(modalView: view, inView: window!)
                     }
                     
                     var localNotification:UILocalNotification = UILocalNotification()
