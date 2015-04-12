@@ -20,7 +20,7 @@ class ShopListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
 
-        self.itemNameLabel.text = "YES"
+        self.itemNameLabel.text = ""
         // Initialization code
     }
 
