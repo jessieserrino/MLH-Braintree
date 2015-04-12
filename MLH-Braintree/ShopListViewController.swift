@@ -120,7 +120,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                     }
                     
                     var localNotification:UILocalNotification = UILocalNotification()
-                    localNotification.alertAction = "shop"
+                    localNotification.alertAction = "Shop"
                     localNotification.alertBody = "Welcome to \(name)! Just swipe to start shopping."
                     localNotification.fireDate = NSDate(timeIntervalSinceNow: 0.5)
                     UIApplication.sharedApplication().scheduleLocalNotification(localNotification)

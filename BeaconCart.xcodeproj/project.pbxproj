@@ -65,14 +65,14 @@
 		910B84101AD9C6A400412CDE /* CartTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		910B84151AD9CAFB00412CDE /* ShopManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopManager.swift; sourceTree = "<group>"; };
 		910B84171AD9DE5100412CDE /* URLRequestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRequestHelper.swift; sourceTree = "<group>"; };
-		913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MLH-Braintree.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		913C7CE31AD952BE00C5EBF7 /* BeaconCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C7CE71AD952BE00C5EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913C7CE81AD952BE00C5EBF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		913C7CEB1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MLH_Braintree.xcdatamodel; sourceTree = "<group>"; };
 		913C7CF01AD952BE00C5EBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		913C7CF21AD952BE00C5EBF7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		913C7CF51AD952BE00C5EBF7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		913C7CFB1AD952BE00C5EBF7 /* MLH-BraintreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MLH-BraintreeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		913C7CFB1AD952BE00C5EBF7 /* BeaconCartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeaconCartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		913C7D001AD952BE00C5EBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		913C7D011AD952BE00C5EBF7 /* MLH_BraintreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLH_BraintreeTests.swift; sourceTree = "<group>"; };
 		91672D631AD97EB400F14257 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
@@ -228,8 +228,8 @@
 		913C7CE41AD952BE00C5EBF7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */,
-				913C7CFB1AD952BE00C5EBF7 /* MLH-BraintreeTests.xctest */,
+				913C7CE31AD952BE00C5EBF7 /* BeaconCart.app */,
+				913C7CFB1AD952BE00C5EBF7 /* BeaconCartTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -291,9 +291,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		913C7CE21AD952BE00C5EBF7 /* MLH-Braintree */ = {
+		913C7CE21AD952BE00C5EBF7 /* BeaconCart */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913C7D051AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-Braintree" */;
+			buildConfigurationList = 913C7D051AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "BeaconCart" */;
 			buildPhases = (
 				09AB499B8071A1C7DD954ED4 /* Check Pods Manifest.lock */,
 				913C7CDF1AD952BE00C5EBF7 /* Sources */,
@@ -305,14 +305,14 @@
 			);
 			dependencies = (
 			);
-			name = "MLH-Braintree";
+			name = BeaconCart;
 			productName = "MLH-Braintree";
-			productReference = 913C7CE31AD952BE00C5EBF7 /* MLH-Braintree.app */;
+			productReference = 913C7CE31AD952BE00C5EBF7 /* BeaconCart.app */;
 			productType = "com.apple.product-type.application";
 		};
-		913C7CFA1AD952BE00C5EBF7 /* MLH-BraintreeTests */ = {
+		913C7CFA1AD952BE00C5EBF7 /* BeaconCartTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 913C7D081AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-BraintreeTests" */;
+			buildConfigurationList = 913C7D081AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "BeaconCartTests" */;
 			buildPhases = (
 				913C7CF71AD952BE00C5EBF7 /* Sources */,
 				913C7CF81AD952BE00C5EBF7 /* Frameworks */,
@@ -323,9 +323,9 @@
 			dependencies = (
 				913C7CFD1AD952BE00C5EBF7 /* PBXTargetDependency */,
 			);
-			name = "MLH-BraintreeTests";
+			name = BeaconCartTests;
 			productName = "MLH-BraintreeTests";
-			productReference = 913C7CFB1AD952BE00C5EBF7 /* MLH-BraintreeTests.xctest */;
+			productReference = 913C7CFB1AD952BE00C5EBF7 /* BeaconCartTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -346,7 +346,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 913C7CDE1AD952BE00C5EBF7 /* Build configuration list for PBXProject "MLH-Braintree" */;
+			buildConfigurationList = 913C7CDE1AD952BE00C5EBF7 /* Build configuration list for PBXProject "BeaconCart" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -359,8 +359,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				913C7CE21AD952BE00C5EBF7 /* MLH-Braintree */,
-				913C7CFA1AD952BE00C5EBF7 /* MLH-BraintreeTests */,
+				913C7CE21AD952BE00C5EBF7 /* BeaconCart */,
+				913C7CFA1AD952BE00C5EBF7 /* BeaconCartTests */,
 			);
 		};
 /* End PBXProject section */
@@ -461,7 +461,7 @@
 /* Begin PBXTargetDependency section */
 		913C7CFD1AD952BE00C5EBF7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 913C7CE21AD952BE00C5EBF7 /* MLH-Braintree */;
+			target = 913C7CE21AD952BE00C5EBF7 /* BeaconCart */;
 			targetProxy = 913C7CFC1AD952BE00C5EBF7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -572,7 +572,7 @@
 				INFOPLIST_FILE = "MLH-Braintree/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconCart;
 				SWIFT_OBJC_BRIDGING_HEADER = "MLH-Braintree/MLH-Braintree-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -587,7 +587,7 @@
 				INFOPLIST_FILE = "MLH-Braintree/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconCart;
 				SWIFT_OBJC_BRIDGING_HEADER = "MLH-Braintree/MLH-Braintree-Bridging-Header.h";
 			};
 			name = Release;
@@ -606,7 +606,7 @@
 				);
 				INFOPLIST_FILE = "MLH-BraintreeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconCartTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLH-Braintree.app/MLH-Braintree";
 			};
 			name = Debug;
@@ -621,7 +621,7 @@
 				);
 				INFOPLIST_FILE = "MLH-BraintreeTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BeaconCartTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLH-Braintree.app/MLH-Braintree";
 			};
 			name = Release;
@@ -629,7 +629,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		913C7CDE1AD952BE00C5EBF7 /* Build configuration list for PBXProject "MLH-Braintree" */ = {
+		913C7CDE1AD952BE00C5EBF7 /* Build configuration list for PBXProject "BeaconCart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913C7D031AD952BE00C5EBF7 /* Debug */,
@@ -638,7 +638,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913C7D051AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-Braintree" */ = {
+		913C7D051AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "BeaconCart" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913C7D061AD952BE00C5EBF7 /* Debug */,
@@ -647,7 +647,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		913C7D081AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-BraintreeTests" */ = {
+		913C7D081AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "BeaconCartTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				913C7D091AD952BE00C5EBF7 /* Debug */,
