@@ -18,8 +18,7 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
     
     let manager: AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()
     var braintree : Braintree?
-    let serverBase = "http://127.0.0.1:3000"
-
+    var transactionID : Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +30,10 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
     }
 
     func getToken() {
-        println("here")
         manager.GET("http://brainbeacon.herokuapp.com/get_token",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
                 var clientToken = responseObject["clientToken"] as! String
-                println(clientToken)
                 self.braintree = Braintree(clientToken: clientToken)
                 //self.buyButtonPressed.userInteractionEnabled = true
             }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
@@ -93,8 +90,8 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
         manager.POST("http://brainbeacon.herokuapp.com/braintree/checkout",
             parameters: parameters,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) -> Void in
-                var transactionId : String = responseObject["transaction"] as! String
-                println("Transaction ID: \(transactionId)")
+                var transactionId = responseObject["transaction"] as! Int
+                self.transactionID = transactionId
             }) { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                 println("Errorrrrrrrr: \(error.description)")
         }
@@ -116,12 +113,13 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
         postNonce(paymentMethod.nonce)
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        let view = ModalView.instantiateFromNib("ModelView")
+        let view = ModalView.instantiateFromNib("ModalView")
         let window = UIApplication.sharedApplication().delegate?.window!
         let modal = PathDynamicModal()
         modal.showMagnitude = 200.0
         modal.closeMagnitude = 130.0
         view.closeButtonHandler = {[weak modal] in
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://brainbeacon.herokuapp.com/payment/\(self.transactionID!)")!)
             modal?.closeWithLeansRandom()
             return
         }
