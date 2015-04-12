@@ -12,8 +12,7 @@ import WebKit
 class CheckoutViewController: UIViewController {
 
     var webView: WKWebView!
-    
-    
+    var braintree : Braintree?
     
     override func viewDidLoad() {
         super.viewDidLoad()
