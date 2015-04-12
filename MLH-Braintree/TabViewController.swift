@@ -14,6 +14,8 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
     @IBOutlet var shopTabBar: UITabBar!
     @IBOutlet var tabNavigationBar: UINavigationItem!
     @IBOutlet var shopListView: UIView!
+    
+    
     var selectedItem: Int!
     
     let manager: AFHTTPRequestOperationManager = AFHTTPRequestOperationManager()

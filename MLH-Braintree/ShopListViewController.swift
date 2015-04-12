@@ -12,6 +12,8 @@ import CoreLocation
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     
+    let cart = Cart()
+    
     var shopItems : NSMutableArray? {
         didSet {
             menuTableView.reloadData()
@@ -19,9 +21,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     
-    var anotherModalViewIsVisible = false;
-    
-    var beacon : Int?
+    var beacon : Int? {
+        didSet {
+            menuTableView.reloadData()
+        }
+    }
     
     @IBOutlet var menuSearchBar: UISearchBar!
 
@@ -35,7 +39,14 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+
+//        return 5
+        if(self.shopItems != nil){
+            return self.shopItems!.count;
+        }
+        else{
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -43,7 +54,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -53,12 +64,12 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ShopListTableViewCell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ShopListTableViewCell
         if let currentBeacon = beacon {
-            let item = self.shopItems!.objectAtIndex(indexPath.item) as! Item
+            let item = self.shopItems!.objectAtIndex(indexPath.section) as! Item
 
             cell.itemImageView?.image = UIImage(named: item.image)
             cell.itemNameLabel?.text = item.description //"\(items[indexPath.row][1])"
             cell.itemPriceLabel?.text = String(format: "%.2f£", item.price)
-            cell.itemQuantityLabel?.text = String(format: "%i",  12)
+            cell.itemQuantityLabel?.text = String(format: "%i", self.cart.amountInCart(item))
         }
         
         
@@ -91,30 +102,21 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 if let name = shopName {
                     var state = UIApplication.sharedApplication().applicationState
                     if state == UIApplicationState.Active {
-                        
-                        if !self.anotherModalViewIsVisible {
-                            let view = ModalView.instantiateFromNib("ModalView2")
-                            view.titleLabel.text = "Welcome to \(name)"
-                            let window = UIApplication.sharedApplication().delegate?.window!
-                            let modal = PathDynamicModal()
-                            modal.showMagnitude = 200.0
-                            modal.closeMagnitude = 130.0
-                            view.closeButtonHandler = {[weak modal] in
-                                self.anotherModalViewIsVisible = false
-                                self.menuTableView.reloadData()
-                                modal?.closeWithLeansRandom()
-                                return
-                            }
-                            view.bottomButtonHandler = {[weak modal] in
-                                self.anotherModalViewIsVisible = false
-                                modal?.closeWithLeansRandom()
-                                return
-                            }
-                            modal.show(modalView: view, inView: window!)
-                            self.anotherModalViewIsVisible = true
-                        } else {
-                            
+                        let view = ModalView.instantiateFromNib("ModalView2")
+                        view.titleLabel.text = "Welcome to \(name)"
+                        let window = UIApplication.sharedApplication().delegate?.window!
+                        let modal = PathDynamicModal()
+                        modal.showMagnitude = 200.0
+                        modal.closeMagnitude = 130.0
+                        view.closeButtonHandler = {[weak modal] in
+                            modal?.closeWithLeansRandom()
+                            return
                         }
+                        view.bottomButtonHandler = {[weak modal] in
+                            modal?.closeWithLeansRandom()
+                            return
+                        }
+                        modal.show(modalView: view, inView: window!)
                     }
                     
                     var localNotification:UILocalNotification = UILocalNotification()
@@ -138,6 +140,8 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.cart.addToCart(self.shopItems!.objectAtIndex(indexPath.section) as! Item)
+        tableView.reloadData()
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
 
     }
