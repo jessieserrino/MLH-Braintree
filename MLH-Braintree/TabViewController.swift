@@ -24,6 +24,7 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
     override func viewDidLoad() {
         super.viewDidLoad()
         self.shopTabBar.delegate = self
+        self.shopTabBar.tintColor = UIColor.whiteColor()
         self.shopTabBar.selectedItem = self.shopTabBar.items![0] as! UITabBarItem
         toggleToItem(self.shopTabBar.selectedItem!)
         getToken()

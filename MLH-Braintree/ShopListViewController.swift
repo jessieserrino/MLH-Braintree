@@ -21,20 +21,27 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    @IBOutlet var menuSearchBar: UISearchBar!
+
     @IBOutlet weak var menuTableView: UITableView! {
         didSet {
             menuTableView.delegate = self
             menuTableView.dataSource = self
             menuTableView.registerNib(UINib(nibName: "ShopListTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+            menuTableView.backgroundColor = UIColor.clearColor()
         }
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return 10
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,9 +63,6 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         let appDelegate = UIApplication.sharedApplication().delegate
         // Do any additional setup after loading the view.
         
-        
-        
-        
         center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
             if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
                 self.beacon = newBeacon.major.integerValue
@@ -75,6 +79,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
     {
     
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
     }
 
     /*

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */; };
-		3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */; };
 		3F4387351ADA0CB70099CCCE /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4387341ADA0CB70099CCCE /* ModalView.xib */; };
 		3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387361ADA0E5B0099CCCE /* ModalView.swift */; };
 		3FF8FD541AD96D0600597798 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD531AD96D0600597798 /* Shop.swift */; };
@@ -32,6 +31,7 @@
 		91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D691AD97ECE00F14257 /* ReceiptViewController.swift */; };
 		91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D6B1AD97ED400F14257 /* ShopListViewController.swift */; };
 		91672D721AD99DC900F14257 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D711AD99DC900F14257 /* TabViewController.swift */; };
+		916C25551ADA13D7000B4F0D /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */; };
 		BE9B753F50EFE6C707DCBDD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F969803B7548A145D717FB2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,7 +49,6 @@
 		34F75BCF8DF41AD3D724E4D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		3F2F11151AD9986400AE3DBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathDynamicModal.swift; path = ../../PathDynamicModal/PathDynamicModal/PathDynamicModal.swift; sourceTree = "<group>"; };
 		3F4387341ADA0CB70099CCCE /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		3F4387361ADA0E5B0099CCCE /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		3FC52C821AD9ED8D00474980 /* MLH-Braintree-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLH-Braintree-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -79,6 +78,7 @@
 		91672D691AD97ECE00F14257 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		91672D6B1AD97ED400F14257 /* ShopListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		91672D711AD99DC900F14257 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDynamicModal.swift; sourceTree = "<group>"; };
 		F969803B7548A145D717FB2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,7 +193,7 @@
 		911DC6961AD96C5B0065C967 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */,
+				916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */,
 				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				910B84151AD9CAFB00412CDE /* ShopManager.swift */,
 				910B84171AD9DE5100412CDE /* URLRequestHelper.swift */,
@@ -431,7 +431,6 @@
 				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
 				3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */,
 				910B84021AD9C3AF00412CDE /* CartViewController.swift in Sources */,
-				3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */,
 				91672D681AD97EC700F14257 /* ItemDetailViewController.swift in Sources */,
 				3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */,
 				910B84161AD9CAFB00412CDE /* ShopManager.swift in Sources */,
@@ -441,6 +440,7 @@
 				910B84181AD9DE5100412CDE /* URLRequestHelper.swift in Sources */,
 				910B84111AD9C6A400412CDE /* CartTableViewCell.swift in Sources */,
 				91672D641AD97EB400F14257 /* CheckoutViewController.swift in Sources */,
+				916C25551ADA13D7000B4F0D /* PathDynamicModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
