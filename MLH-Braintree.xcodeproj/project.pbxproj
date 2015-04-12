@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */; };
-		3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */; };
 		3F4387351ADA0CB70099CCCE /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4387341ADA0CB70099CCCE /* ModalView.xib */; };
 		3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387361ADA0E5B0099CCCE /* ModalView.swift */; };
 		3F9B520A1ADA251F0071DAD1 /* ModalView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B52091ADA251F0071DAD1 /* ModalView2.xib */; };
@@ -50,7 +49,6 @@
 		34F75BCF8DF41AD3D724E4D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		3F2F11151AD9986400AE3DBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathDynamicModal.swift; path = ../../PathDynamicModal/PathDynamicModal/PathDynamicModal.swift; sourceTree = "<group>"; };
 		3F4387341ADA0CB70099CCCE /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		3F4387361ADA0E5B0099CCCE /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		3F9B52091ADA251F0071DAD1 /* ModalView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView2.xib; sourceTree = "<group>"; };
@@ -195,7 +193,6 @@
 		911DC6961AD96C5B0065C967 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */,
 				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				910B84151AD9CAFB00412CDE /* ShopManager.swift */,
 				910B84171AD9DE5100412CDE /* URLRequestHelper.swift */,
@@ -435,7 +432,6 @@
 				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
 				3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */,
 				910B84021AD9C3AF00412CDE /* CartViewController.swift in Sources */,
-				3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */,
 				91672D681AD97EC700F14257 /* ItemDetailViewController.swift in Sources */,
 				3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */,
 				910B84161AD9CAFB00412CDE /* ShopManager.swift in Sources */,
