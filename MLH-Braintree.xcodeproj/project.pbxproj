@@ -31,7 +31,7 @@
 		91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D691AD97ECE00F14257 /* ReceiptViewController.swift */; };
 		91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D6B1AD97ED400F14257 /* ShopListViewController.swift */; };
 		91672D721AD99DC900F14257 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D711AD99DC900F14257 /* TabViewController.swift */; };
-		916C25551ADA13D7000B4F0D /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */; };
+		916C25591ADA2D50000B4F0D /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916C25581ADA2D50000B4F0D /* PathDynamicModal.swift */; };
 		BE9B753F50EFE6C707DCBDD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F969803B7548A145D717FB2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -78,7 +78,7 @@
 		91672D691AD97ECE00F14257 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		91672D6B1AD97ED400F14257 /* ShopListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		91672D711AD99DC900F14257 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
-		916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDynamicModal.swift; sourceTree = "<group>"; };
+		916C25581ADA2D50000B4F0D /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDynamicModal.swift; sourceTree = "<group>"; };
 		F969803B7548A145D717FB2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -193,10 +193,10 @@
 		911DC6961AD96C5B0065C967 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				916C25541ADA13D7000B4F0D /* PathDynamicModal.swift */,
 				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				910B84151AD9CAFB00412CDE /* ShopManager.swift */,
 				910B84171AD9DE5100412CDE /* URLRequestHelper.swift */,
+				916C25581ADA2D50000B4F0D /* PathDynamicModal.swift */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -437,10 +437,10 @@
 				3FF8FD541AD96D0600597798 /* Shop.swift in Sources */,
 				91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */,
 				91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */,
+				916C25591ADA2D50000B4F0D /* PathDynamicModal.swift in Sources */,
 				910B84181AD9DE5100412CDE /* URLRequestHelper.swift in Sources */,
 				910B84111AD9C6A400412CDE /* CartTableViewCell.swift in Sources */,
 				91672D641AD97EB400F14257 /* CheckoutViewController.swift in Sources */,
-				916C25551ADA13D7000B4F0D /* PathDynamicModal.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

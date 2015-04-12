@@ -180,9 +180,9 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         UIView.animateWithDuration(0.4, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
             self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha * fromAlpha)
             self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha * toAlpha)
-        }) { (flag) -> Void in
-            completion?(flag)
-            return
+            }) { (flag) -> Void in
+                completion?(flag)
+                return
         }
     }
     
@@ -222,7 +222,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             case .Cancelled, .Ended:
                 if self.contentView.center.y >= CGRectGetHeight(self.backgroundView.bounds)
                     || velocityY >= 200.0 {
-                    self.close(horizontalOffset: 0)
+                        self.close(horizontalOffset: 0)
                 }else {
                     UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState | .CurveEaseOut, animations: { () -> Void in
                         self.contentView.transform = CGAffineTransformIdentity
