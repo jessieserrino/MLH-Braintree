@@ -101,6 +101,7 @@
                 <outlet property="bottomButton" destination="uCC-j1-lH5" id="c4f-Oz-f9H"/>
                 <outlet property="closeButton" destination="fyV-xL-BjW" id="UCF-EF-Rgd"/>
                 <outlet property="contentView" destination="EDf-bK-x6Y" id="Xg6-Y8-hGL"/>
+                <outlet property="titleLabel" destination="mpE-hz-I1C" id="DkX-7A-y1M"/>
             </connections>
             <point key="canvasLocation" x="-127" y="345"/>
         </view>

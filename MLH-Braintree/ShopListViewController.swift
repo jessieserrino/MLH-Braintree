@@ -10,10 +10,9 @@ import UIKit
 import CoreLocation
 
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var items =
-    [1412:"Item in beacon 1412",
-        11617:"Item in beacon 11617",
-        36593:"Item in beacon 36593"]
+    var items = [[1, "Calamari", 9.00], [2, "Filet splendito", 14.00], [3, "Mozzarella marinara", 7.45], [4, "Parmesan crusted chicken salad", 10.00], [5, "Margherita", 5.00]]
+    var items2 = [[1, "Jersey Dress", 12.95], [2, "Nep Jersey T-shirt", 9.95], [3, "Denim Shorts", 19.95], [4, "Men's Johnston & Murphy Atchison Cap Toe", 100.52], [5, "Blazer Slim fit", 69.95]]
+    var items3 = [[1, "Bristol", 62.00], [2, "Birmingham", 38.80], [3, "Liverpool", 87.60], [4, "Manchester", 89.30], [5, "Edinburgh", 134.20]]
     
     var beacon : Int? {
         didSet {
@@ -37,7 +36,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -47,9 +46,19 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell : ShopListTableViewCell = menuTableView.dequeueReusableCellWithIdentifier("itemCell", forIndexPath: indexPath) as! ShopListTableViewCell
         if let currentBeacon = beacon {
-            cell.itemImageView?.image = UIImage(named: "Cart")
-            cell.itemNameLabel?.text = items[currentBeacon];
-            cell.itemPriceLabel?.text = "$99"
+            cell.itemImageView?.image = UIImage(named: "\(currentBeacon)_\(indexPath.row+1)")
+            switch currentBeacon {
+            case 1412:
+                cell.itemNameLabel?.text = "\(items[indexPath.row][1])"
+                cell.itemPriceLabel?.text = String(format: "%.2f£", items[indexPath.row][2] as! Double)
+            case 11617:
+                cell.itemNameLabel?.text = "\(items2[indexPath.row][1])"
+                cell.itemPriceLabel?.text = String(format: "%.2f£", items2[indexPath.row][2] as! Double)
+            case 36593:
+                cell.itemNameLabel?.text = "\(items3[indexPath.row][1])"
+                cell.itemPriceLabel?.text = String(format: "%.2f£", items3[indexPath.row][2] as! Double)
+            default: break
+            }
         }
         
         return cell
@@ -77,26 +86,27 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 default:
                     break;
                 }
-                var state = UIApplication.sharedApplication().applicationState
-                if state == UIApplicationState.Active {
-                    let view = ModalView.instantiateFromNib("ModalView2")
-                    let window = UIApplication.sharedApplication().delegate?.window!
-                    let modal = PathDynamicModal()
-                    modal.showMagnitude = 200.0
-                    modal.closeMagnitude = 130.0
-                    view.closeButtonHandler = {[weak modal] in
-                        modal?.closeWithLeansRandom()
-                        return
-                    }
-                    view.bottomButtonHandler = {[weak modal] in
-                        modal?.closeWithLeansRandom()
-                        return
-                    }
-                    modal.show(modalView: view, inView: window!)
-                }
-                    
                 
                 if let name = shopName {
+                    var state = UIApplication.sharedApplication().applicationState
+                    if state == UIApplicationState.Active {
+                        let view = ModalView.instantiateFromNib("ModalView2")
+                        view.titleLabel.text = "Welcome to \(name)"
+                        let window = UIApplication.sharedApplication().delegate?.window!
+                        let modal = PathDynamicModal()
+                        modal.showMagnitude = 200.0
+                        modal.closeMagnitude = 130.0
+                        view.closeButtonHandler = {[weak modal] in
+                            modal?.closeWithLeansRandom()
+                            return
+                        }
+                        view.bottomButtonHandler = {[weak modal] in
+                            modal?.closeWithLeansRandom()
+                            return
+                        }
+                        modal.show(modalView: view, inView: window!)
+                    }
+                    
                     var localNotification:UILocalNotification = UILocalNotification()
                     localNotification.alertAction = "shop"
                     localNotification.alertBody = "Welcome to \(name)! Just swipe to start shopping."
