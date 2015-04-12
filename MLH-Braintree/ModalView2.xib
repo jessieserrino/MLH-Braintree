@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="tcX-jT-eoT" customClass="ModalView" customModule="MLH_Braintree" customModuleProvider="target">
+        <view contentMode="scaleToFill" id="tcX-jT-eoT" customClass="ModalView" customModule="BeaconCart" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
@@ -28,16 +28,16 @@
                                 <action selector="handleCloseButton:" destination="tcX-jT-eoT" eventType="touchUpInside" id="tMY-4M-HDv"/>
                             </connections>
                         </button>
-                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Shop" translatesAutoresizingMaskIntoConstraints="NO" id="aun-pk-rB7">
-                            <rect key="frame" x="103" y="35" width="80" height="80"/>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="Shop" translatesAutoresizingMaskIntoConstraints="NO" id="aun-pk-rB7">
+                            <rect key="frame" x="103" y="10" width="80" height="80"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="80" id="9Fm-71-epW"/>
                                 <constraint firstAttribute="width" constant="80" id="b1w-An-uCQ"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our shop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-hz-I1C">
-                            <rect key="frame" x="0.0" y="125" width="280" height="25"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to our shop!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-hz-I1C">
+                            <rect key="frame" x="0.0" y="95" width="280" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="Hf1-Rz-uzI"/>
                             </constraints>
