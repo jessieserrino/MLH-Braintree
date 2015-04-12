@@ -35,6 +35,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
@@ -60,6 +64,7 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
             default: break
             }
         }
+        
         
         return cell
     }

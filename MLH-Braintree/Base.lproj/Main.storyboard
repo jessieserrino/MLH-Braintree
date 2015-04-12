@@ -62,14 +62,14 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="JmJ-9T-uHA"/>
-                                <exclude reference="TKe-Ge-RgT"/>
-                                <exclude reference="VPp-49-DPw"/>
-                                <exclude reference="m4X-ZD-1Yz"/>
                                 <exclude reference="DUR-5Y-jgS"/>
                                 <exclude reference="Ded-hQ-1y0"/>
                                 <exclude reference="MWk-g7-dVe"/>
                                 <exclude reference="ucx-TD-2yL"/>
+                                <exclude reference="JmJ-9T-uHA"/>
+                                <exclude reference="TKe-Ge-RgT"/>
+                                <exclude reference="VPp-49-DPw"/>
+                                <exclude reference="m4X-ZD-1Yz"/>
                             </mask>
                         </variation>
                     </view>
@@ -154,8 +154,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8BZ-Go-71J">
-                                <rect key="frame" x="224" y="-61" width="414" height="579"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" allowsSelectionDuringEditing="YES" rowHeight="66" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8BZ-Go-71J">
+                                <rect key="frame" x="0.0" y="44" width="414" height="579"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="separatorColor" red="1" green="1" blue="1" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
                             </tableView>

@@ -83,6 +83,7 @@
                 <outlet property="itemImageView" destination="Wby-bv-Wva" id="vhk-53-8JA"/>
                 <outlet property="itemNameLabel" destination="iZs-SP-7Xl" id="NI7-r1-mzW"/>
                 <outlet property="itemPriceLabel" destination="TtK-Lc-qs2" id="44K-5a-umB"/>
+                <outlet property="itemQuantityLabel" destination="Zx0-iA-Uzf" id="Gux-i2-2UP"/>
             </connections>
             <point key="canvasLocation" x="441" y="368"/>
         </tableViewCell>

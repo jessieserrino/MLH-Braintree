@@ -21,12 +21,18 @@ class Cart {
             cart[itemID] = item + 1
         } else {
             cart[itemID] = 1
-        }    }
+        }
+    }
     
     
-    func inCart(item: Item) -> Bool
+    func amountInCart(item: Item) -> Int
     {
-        return false
+        let itemID = item.id
+        if let item = cart[itemID] {
+            return item
+        } else {
+            return 0
+        }
     }
     
     /*func addToCart (itemIDs: [Int]) {
