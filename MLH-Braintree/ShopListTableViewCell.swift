@@ -15,6 +15,7 @@ class ShopListTableViewCell: UITableViewCell {
     @IBOutlet var itemNameLabel: UILabel!
     @IBOutlet var itemPriceLabel: UILabel!
     
+    @IBOutlet var itemQuantityLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

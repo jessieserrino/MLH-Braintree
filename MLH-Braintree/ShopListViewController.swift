@@ -10,6 +10,7 @@ import UIKit
 import CoreLocation
 
 class ShopListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var cart = Cart()
     var items =
     [1412:"Item in beacon 1412",
         11617:"Item in beacon 11617",
@@ -36,6 +37,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         return 1
     }
     
+    func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
     }
@@ -50,7 +55,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
             cell.itemImageView?.image = UIImage(named: "Cart")
             cell.itemNameLabel?.text = items[currentBeacon];
             cell.itemPriceLabel?.text = "$99"
+            
+
         }
+        
         
         return cell
     }
