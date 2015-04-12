@@ -29,9 +29,12 @@ class ShopListTableViewCell: UITableViewCell {
         self.itemImageView.layer.cornerRadius = self.itemImageView.frame.size.width / 2
         
         self.itemImageView.layer.masksToBounds = true
+        self.itemImageView.layer.borderWidth = 2.0
+        self.itemImageView.layer.borderColor = UIColor.whiteColor().CGColor
         
 
     }
+    
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -21,11 +21,14 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    @IBOutlet var menuSearchBar: UISearchBar!
+
     @IBOutlet weak var menuTableView: UITableView! {
         didSet {
             menuTableView.delegate = self
             menuTableView.dataSource = self
             menuTableView.registerNib(UINib(nibName: "ShopListTableViewCell", bundle: nil), forCellReuseIdentifier: "itemCell")
+            menuTableView.backgroundColor = UIColor.clearColor()
         }
     }
     
@@ -35,6 +38,10 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 80.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -105,6 +112,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String)
     {
     
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+
     }
 
     /*
