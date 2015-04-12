@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */; };
+		3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */; };
+		3F4387351ADA0CB70099CCCE /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4387341ADA0CB70099CCCE /* ModalView.xib */; };
+		3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387361ADA0E5B0099CCCE /* ModalView.swift */; };
 		3FF8FD541AD96D0600597798 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD531AD96D0600597798 /* Shop.swift */; };
 		3FF8FD581AD9709700597798 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD571AD9709700597798 /* Item.swift */; };
 		3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD591AD9712500597798 /* Cart.swift */; };
@@ -29,6 +32,7 @@
 		91672D6A1AD97ECE00F14257 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D691AD97ECE00F14257 /* ReceiptViewController.swift */; };
 		91672D6D1AD97ED400F14257 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D6B1AD97ED400F14257 /* ShopListViewController.swift */; };
 		91672D721AD99DC900F14257 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91672D711AD99DC900F14257 /* TabViewController.swift */; };
+		BE9B753F50EFE6C707DCBDD6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F969803B7548A145D717FB2B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34F75BCF8DF41AD3D724E4D4 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		3F2F11151AD9986400AE3DBA /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathDynamicModal.swift; path = ../../PathDynamicModal/PathDynamicModal/PathDynamicModal.swift; sourceTree = "<group>"; };
+		3F4387341ADA0CB70099CCCE /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
+		3F4387361ADA0E5B0099CCCE /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		3FC52C821AD9ED8D00474980 /* MLH-Braintree-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLH-Braintree-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FF8FD531AD96D0600597798 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		3FF8FD571AD9709700597798 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		3FF8FD591AD9712500597798 /* Cart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
+		7546263C95D124487A69919D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		910B84011AD9C3AF00412CDE /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		910B84081AD9C63E00412CDE /* ShopListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListTableViewCell.swift; sourceTree = "<group>"; };
 		910B84091AD9C63E00412CDE /* ShopListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShopListTableViewCell.xib; sourceTree = "<group>"; };
@@ -69,6 +79,7 @@
 		91672D691AD97ECE00F14257 /* ReceiptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		91672D6B1AD97ED400F14257 /* ShopListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
 		91672D711AD99DC900F14257 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		F969803B7548A145D717FB2B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9B753F50EFE6C707DCBDD6 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5DE17EAEF5776FB1448AA029 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F969803B7548A145D717FB2B /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		910B83FF1AD9C34C00412CDE /* Shop Tab */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +193,7 @@
 		911DC6961AD96C5B0065C967 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */,
 				3F2F11131AD9922C00AE3DBA /* BeaconManager.swift */,
 				910B84151AD9CAFB00412CDE /* ShopManager.swift */,
 				910B84171AD9DE5100412CDE /* URLRequestHelper.swift */,
@@ -197,6 +218,8 @@
 				913C7CE51AD952BE00C5EBF7 /* MLH-Braintree */,
 				913C7CFE1AD952BE00C5EBF7 /* MLH-BraintreeTests */,
 				913C7CE41AD952BE00C5EBF7 /* Products */,
+				F02163E13516A01B273B00F0 /* Pods */,
+				5DE17EAEF5776FB1448AA029 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +244,8 @@
 				913C7CF41AD952BE00C5EBF7 /* LaunchScreen.xib */,
 				913C7CEA1AD952BE00C5EBF7 /* MLH_Braintree.xcdatamodeld */,
 				913C7CE61AD952BE00C5EBF7 /* Supporting Files */,
+				3FC52C821AD9ED8D00474980 /* MLH-Braintree-Bridging-Header.h */,
+				3F4387341ADA0CB70099CCCE /* ModalView.xib */,
 			);
 			path = "MLH-Braintree";
 			sourceTree = "<group>";
@@ -228,6 +253,7 @@
 		913C7CE61AD952BE00C5EBF7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3F4387361ADA0E5B0099CCCE /* ModalView.swift */,
 				913C7CE71AD952BE00C5EBF7 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -250,6 +276,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F02163E13516A01B273B00F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7546263C95D124487A69919D /* Pods.debug.xcconfig */,
+				34F75BCF8DF41AD3D724E4D4 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -257,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 913C7D051AD952BE00C5EBF7 /* Build configuration list for PBXNativeTarget "MLH-Braintree" */;
 			buildPhases = (
+				09AB499B8071A1C7DD954ED4 /* Check Pods Manifest.lock */,
 				913C7CDF1AD952BE00C5EBF7 /* Sources */,
 				913C7CE01AD952BE00C5EBF7 /* Frameworks */,
 				913C7CE11AD952BE00C5EBF7 /* Resources */,
+				8006A15561A808189CA5C4C4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -334,6 +371,7 @@
 				913C7CF11AD952BE00C5EBF7 /* Main.storyboard in Resources */,
 				913C7CF61AD952BE00C5EBF7 /* LaunchScreen.xib in Resources */,
 				913C7CF31AD952BE00C5EBF7 /* Images.xcassets in Resources */,
+				3F4387351ADA0CB70099CCCE /* ModalView.xib in Resources */,
 				910B840B1AD9C63E00412CDE /* ShopListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +385,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09AB499B8071A1C7DD954ED4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8006A15561A808189CA5C4C4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		913C7CDF1AD952BE00C5EBF7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -358,7 +429,9 @@
 				910B840A1AD9C63E00412CDE /* ShopListTableViewCell.swift in Sources */,
 				91672D721AD99DC900F14257 /* TabViewController.swift in Sources */,
 				3FF8FD581AD9709700597798 /* Item.swift in Sources */,
+				3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */,
 				910B84021AD9C3AF00412CDE /* CartViewController.swift in Sources */,
+				3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */,
 				91672D681AD97EC700F14257 /* ItemDetailViewController.swift in Sources */,
 				3F2F11141AD9922C00AE3DBA /* BeaconManager.swift in Sources */,
 				910B84161AD9CAFB00412CDE /* ShopManager.swift in Sources */,
@@ -488,23 +561,30 @@
 		};
 		913C7D061AD952BE00C5EBF7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7546263C95D124487A69919D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "MLH-Braintree/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MLH-Braintree/MLH-Braintree-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		913C7D071AD952BE00C5EBF7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34F75BCF8DF41AD3D724E4D4 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "MLH-Braintree/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MLH-Braintree/MLH-Braintree-Bridging-Header.h";
 			};
 			name = Release;
 		};
