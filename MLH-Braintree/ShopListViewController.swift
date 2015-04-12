@@ -54,17 +54,11 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
         let center = NSNotificationCenter.defaultCenter()
         let queue = NSOperationQueue.mainQueue()
         let appDelegate = UIApplication.sharedApplication().delegate
-        // Do any additional setup after loading the view.
-        
-        
-        
         
         center.addObserverForName("Closest Beacon Center", object: appDelegate, queue: queue) { notification in
             if let newBeacon = notification?.userInfo?["Beacon"] as? CLBeacon {
                 self.beacon = newBeacon.major.integerValue
                 
-                var localNotification:UILocalNotification = UILocalNotification()
-                localNotification.alertAction = "shop"
                 var shopName: String?
                 switch newBeacon.major {
                 case 1412:
@@ -76,19 +70,35 @@ class ShopListViewController: UIViewController, UITableViewDelegate, UITableView
                 default:
                     break;
                 }
+                var state = UIApplication.sharedApplication().applicationState
+                if state == UIApplicationState.Active {
+                    let view = ModalView.instantiateFromNib("ModalView2")
+                    let window = UIApplication.sharedApplication().delegate?.window!
+                    let modal = PathDynamicModal()
+                    modal.showMagnitude = 200.0
+                    modal.closeMagnitude = 130.0
+                    view.closeButtonHandler = {[weak modal] in
+                        modal?.closeWithLeansRandom()
+                        return
+                    }
+                    view.bottomButtonHandler = {[weak modal] in
+                        modal?.closeWithLeansRandom()
+                        return
+                    }
+                    modal.show(modalView: view, inView: window!)
+                }
+                    
                 
                 if let name = shopName {
+                    var localNotification:UILocalNotification = UILocalNotification()
+                    localNotification.alertAction = "shop"
                     localNotification.alertBody = "Welcome to \(name)! Just swipe to start shopping."
                     localNotification.fireDate = NSDate(timeIntervalSinceNow: 0.5)
                     UIApplication.sharedApplication().scheduleLocalNotification(localNotification)
                 }
+
             }
         }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     // Getting the search going

@@ -115,7 +115,7 @@ class TabViewController: UIViewController, UITabBarDelegate, BTDropInViewControl
         postNonce(paymentMethod.nonce)
         self.dismissViewControllerAnimated(true, completion: nil)
         
-        let view = ModalView.instantiateFromNib()
+        let view = ModalView.instantiateFromNib("ModelView")
         let window = UIApplication.sharedApplication().delegate?.window!
         let modal = PathDynamicModal()
         modal.showMagnitude = 200.0

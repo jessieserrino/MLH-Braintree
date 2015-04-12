@@ -11,6 +11,7 @@
 		3F4387331ADA0C7B0099CCCE /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */; };
 		3F4387351ADA0CB70099CCCE /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F4387341ADA0CB70099CCCE /* ModalView.xib */; };
 		3F4387371ADA0E5B0099CCCE /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4387361ADA0E5B0099CCCE /* ModalView.swift */; };
+		3F9B520A1ADA251F0071DAD1 /* ModalView2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F9B52091ADA251F0071DAD1 /* ModalView2.xib */; };
 		3FF8FD541AD96D0600597798 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD531AD96D0600597798 /* Shop.swift */; };
 		3FF8FD581AD9709700597798 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD571AD9709700597798 /* Item.swift */; };
 		3FF8FD5A1AD9712500597798 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF8FD591AD9712500597798 /* Cart.swift */; };
@@ -52,6 +53,7 @@
 		3F4387321ADA0C7B0099CCCE /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PathDynamicModal.swift; path = ../../PathDynamicModal/PathDynamicModal/PathDynamicModal.swift; sourceTree = "<group>"; };
 		3F4387341ADA0CB70099CCCE /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		3F4387361ADA0E5B0099CCCE /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		3F9B52091ADA251F0071DAD1 /* ModalView2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView2.xib; sourceTree = "<group>"; };
 		3FC52C821AD9ED8D00474980 /* MLH-Braintree-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MLH-Braintree-Bridging-Header.h"; sourceTree = "<group>"; };
 		3FF8FD531AD96D0600597798 /* Shop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 		3FF8FD571AD9709700597798 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 				913C7CE61AD952BE00C5EBF7 /* Supporting Files */,
 				3FC52C821AD9ED8D00474980 /* MLH-Braintree-Bridging-Header.h */,
 				3F4387341ADA0CB70099CCCE /* ModalView.xib */,
+				3F9B52091ADA251F0071DAD1 /* ModalView2.xib */,
 			);
 			path = "MLH-Braintree";
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				910B84121AD9C6A400412CDE /* CartTableViewCell.xib in Resources */,
+				3F9B520A1ADA251F0071DAD1 /* ModalView2.xib in Resources */,
 				913C7CF11AD952BE00C5EBF7 /* Main.storyboard in Resources */,
 				913C7CF61AD952BE00C5EBF7 /* LaunchScreen.xib in Resources */,
 				913C7CF31AD952BE00C5EBF7 /* Images.xcassets in Resources */,

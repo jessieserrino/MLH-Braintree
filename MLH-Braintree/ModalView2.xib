@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="tcX-jT-eoT" customClass="ModalView" customModule="MLH_Braintree" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ModalView" translatesAutoresizingMaskIntoConstraints="NO" id="EDf-bK-x6Y">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCC-j1-lH5">
+                            <rect key="frame" x="0.0" y="240" width="280" height="60"/>
+                            <color key="backgroundColor" red="0.087303549146537499" green="0.42031901915514303" blue="0.50699666703802726" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="WnI-ig-dUA"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="Let's start shopping!">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="handleCloseButton:" destination="tcX-jT-eoT" eventType="touchUpInside" id="tMY-4M-HDv"/>
+                            </connections>
+                        </button>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="Shop" translatesAutoresizingMaskIntoConstraints="NO" id="aun-pk-rB7">
+                            <rect key="frame" x="103" y="35" width="80" height="80"/>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="9Fm-71-epW"/>
+                                <constraint firstAttribute="width" constant="80" id="b1w-An-uCQ"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to our shop!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpE-hz-I1C">
+                            <rect key="frame" x="0.0" y="125" width="280" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="Hf1-Rz-uzI"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Enjoy the shopping experience with BeaconCart!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="190" translatesAutoresizingMaskIntoConstraints="NO" id="gnB-dK-HPG">
+                            <rect key="frame" x="50" y="150" width="181" height="61"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="42" id="9kM-eR-wEK"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="0.70000000000000007" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.25592072147149336" green="0.58223732924185945" blue="0.72549019607843135" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="gnB-dK-HPG" firstAttribute="leading" secondItem="EDf-bK-x6Y" secondAttribute="leading" constant="25" id="34Q-1E-RhA"/>
+                        <constraint firstAttribute="centerX" secondItem="aun-pk-rB7" secondAttribute="centerX" constant="-3" id="8Cl-MR-1s9"/>
+                        <constraint firstAttribute="trailing" secondItem="uCC-j1-lH5" secondAttribute="trailing" id="M64-gb-n4F"/>
+                        <constraint firstItem="aun-pk-rB7" firstAttribute="top" secondItem="EDf-bK-x6Y" secondAttribute="top" constant="35" id="TeU-ZF-lmK"/>
+                        <constraint firstItem="mpE-hz-I1C" firstAttribute="leading" secondItem="EDf-bK-x6Y" secondAttribute="leading" id="d5q-Iu-y61"/>
+                        <constraint firstItem="mpE-hz-I1C" firstAttribute="top" secondItem="aun-pk-rB7" secondAttribute="bottom" constant="10" id="dFP-uO-Atf"/>
+                        <constraint firstItem="gnB-dK-HPG" firstAttribute="top" secondItem="mpE-hz-I1C" secondAttribute="bottom" id="pTd-KM-g2M"/>
+                        <constraint firstAttribute="trailing" secondItem="mpE-hz-I1C" secondAttribute="trailing" id="qZU-Ai-Lag"/>
+                        <constraint firstItem="uCC-j1-lH5" firstAttribute="leading" secondItem="EDf-bK-x6Y" secondAttribute="leading" id="s3M-oG-B60"/>
+                        <constraint firstAttribute="trailing" secondItem="gnB-dK-HPG" secondAttribute="trailing" constant="25" id="wkK-D5-tPz"/>
+                        <constraint firstAttribute="bottom" secondItem="uCC-j1-lH5" secondAttribute="bottom" id="y0w-lc-yHV"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fyV-xL-BjW">
+                    <rect key="frame" x="-10" y="-10" width="25" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="3pN-K0-lee"/>
+                        <constraint firstAttribute="width" constant="25" id="SGy-d0-u7x"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="1" minY="1" maxX="1" maxY="1"/>
+                    <state key="normal" image="icon_close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleBottomButton:" destination="tcX-jT-eoT" eventType="touchUpInside" id="bZx-CE-eXa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="EDf-bK-x6Y" secondAttribute="trailing" id="52Y-Vn-oOP"/>
+                <constraint firstItem="EDf-bK-x6Y" firstAttribute="top" secondItem="tcX-jT-eoT" secondAttribute="top" id="D5Z-aB-rav"/>
+                <constraint firstItem="EDf-bK-x6Y" firstAttribute="leading" secondItem="tcX-jT-eoT" secondAttribute="leading" id="IJn-z9-rEf"/>
+                <constraint firstItem="fyV-xL-BjW" firstAttribute="leading" secondItem="tcX-jT-eoT" secondAttribute="leading" constant="-10" id="Tov-A6-XGJ"/>
+                <constraint firstItem="fyV-xL-BjW" firstAttribute="top" secondItem="tcX-jT-eoT" secondAttribute="top" constant="-10" id="Ucc-gY-3It"/>
+                <constraint firstAttribute="bottom" secondItem="EDf-bK-x6Y" secondAttribute="bottom" id="o5D-QS-59g"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomButton" destination="uCC-j1-lH5" id="c4f-Oz-f9H"/>
+                <outlet property="closeButton" destination="fyV-xL-BjW" id="UCF-EF-Rgd"/>
+                <outlet property="contentView" destination="EDf-bK-x6Y" id="Xg6-Y8-hGL"/>
+            </connections>
+            <point key="canvasLocation" x="-127" y="345"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Shop" width="256" height="256"/>
+        <image name="icon_close" width="64" height="64"/>
+    </resources>
+</document>
